@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Investments</title>
+    <link rel="stylesheet" href="devheat.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>     
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Google Fonts (poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+<body>
+
+
+<div id="home_page">  
+  <!--nav bar section start-->  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light-blue ">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/navbar-logo-img.png"
+            class="navbar-image"
+            alt=""
+          />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active nav-link-hover" href="#">
+                Home <span class="sr-only">(current)</span>
+              </a>
+              <a class="nav-link nav-link-hover" href="#"  onclick="display('sectionFavouriteCompanies')">INVEST</a>
+              <a class="nav-link nav-link-hover" href="#">EDUCATE</a>
+              <a class="nav-link nav-link-hover" href="#">WHY CHOOSE US?</a>
+              <a class="nav-link nav-link-hover" href="#">HELP</a>
+              <a class="nav-link nav-link-hover" href="#" onclick="display('sectionLoginPage')">LOGIN</a>
+              
+          </div>
+        </div>
+    </nav>
+    <!--nav bar section end-->
+
+    <!--search bar and filter section start
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" id="filterButton">Search</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Filter
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="filterDropdown">
+                      <a class="dropdown-item" href="#" data-filter="option1">Filter Option 1</a>
+                      <a class="dropdown-item" href="#" data-filter="option2">Filter Option 2</a>
+                      <a class="dropdown-item" href="#" data-filter="option3">Filter Option 3</a>
+                       Add more filter options as needed -->
+                  <!--</div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="container mt-3">
+      <div class="row">
+          <div class="col-md-12">
+              <div id="detailsContainer">
+                   Details will be displayed here based on the selected filter option -->
+              <!--</div>
+          </div>
+      </div>
+  </div>
+      search bar and filter section end-->
+
+      <!--carousel section start-->
+      <div class="container mt-5 mb-4 ">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000" >
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="15.jpg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item ">
+              <img src="16.jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="17.jpg" class="d-block w-100" alt="Image 3">
+            </div>
+          </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </div>
+
+      <!--carousel section end-->
+
+      <!--cards section start-->
+      <section class="section-wrapper"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-lg-3">
+              <div class="single-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+                <div class="content">
+                    <span class="icon">
+                      <i class="bi bi-bar-chart-fill"></i>
+                    </span>
+                    <h3 class="text">Expert Analysts</h3>
+                    <p class="description">Investment websites often offer research reports, market analysis, and investment recommendations to help investors assess investment opportunities.</p>
+                </div>
+               <span class="circle-before"></span>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-3">
+              <div class="single-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+                <div class="content">
+                  <span class="icon">
+                    <i class="bi bi-coin"></i>
+                  </span>
+                  <h3 class="text">best technology</h3>
+                  <p class="description">investment websites offer portfolio management tools that allow users to track and manage their investment portfolios.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-3">
+              <div class="single-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+                <div class="content">
+                  <span class="icon">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <h3 class="text">On Time Delivery</h3>
+                  <p class="description"> investment websites serve as platforms for buying and selling various investment products, such as stocks, bonds, mutual funds, or exchange-traded funds (ETFs).</p>
+                </div>
+               <span class="circle-before"></span>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-3">
+              <div class="single-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+                <div class="content">
+                  <span class="icon">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <h3 class="text">Sustainability Initiatives</h3>
+                  <p class="description">we are committed to sustainability, reduce our carbon footprint,support local environmental causes, engage in sustainable advocacy, and encourage employee involvement. Our initiatives align with our mission to create a sustainable future."</p>
+                </div>
+               <span class="circle-before"></span>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="single-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.2s">
+                <div class="content">
+                  <span class="icon">
+                    <i class="bi bi-bar-chart-fill"></i>
+                  </span>
+                  <h2 class="text">6 PRINCIPLES</h2>
+                  <h4 class="text">Financial Performance:</h4>
+                  <p class="description">Balance the pursuit of competitive financial returns with the steadfast commitment to upholding ESG values and principles, seeking to create a portfolio that delivers both financial prosperity and positive societal and environmental outcomes.</p> 
+                  <h4 class="text">Long-Term View: </h4>
+                  <p class="description">Embrace a patient, long-term investment horizon, recognizing that sustainable practices often yield stronger financial performance over time.</p>
+                  <h4 class="text">Positive Impact:</h4>
+                  <p class="description"> Prioritize investments that actively contribute to positive societal and environmental outcomes, emphasizing a dual focus on profit and purpose.</p>
+                  <h4 class="text">ESG Integration:</h4>
+                  <p class="description"> Rigorously incorporate environmental, social, and governance (ESG) factors into investment processes to assess risks and opportunities comprehensively.</p>
+                  <h4 class="text">Advocacy and Transparency:</h4>
+                  <p class="description">Engage proactively with portfolio companies, leveraging shareholder influence to drive improvements in ESG practices, and advocate for enhanced corporate transparency.</p> 
+                  <h4 class="text">Risk Management:</h4>
+                  <p class="description">Integrate ESG factors into risk assessment models to identify potential risks related to environmental, social, and governance issues and utilize ESG analysis for robust risk mitigation.
+                  </p>
+                </div>
+               <span class="circle-before"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+      <!--cards section end-->
+
+<!--investment plan start-->
+      <section id="pricing2">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading">
+                    <h1 style="color: aliceblue;">Investment Plans</h1>
+                    <p style="color: aliceblue;">
+                        We use the latest technologies and tools in order to create a better code that not only
+                        works great, but it is easy easy to work with too.
+                    </p>
+                    <div class="tab-menu">
+                        <ul class="nav" id="my-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-monthly-tab" data-toggle="pill" href="#pills-monthly1" role="tab" aria-controls="pills-monthly" aria-selected="false">Daily</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <h2 style="color: aliceblue;">Daily Investment</h2>
+                        <div class="tab-pane fade show active" id="pills-monthly1" role="tabpanel" aria-labelledby="pills-monthly-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 10 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">100%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $100</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $1000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 20 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">200%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $200</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $2000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 30 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">300%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $300</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $3000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-menu">
+                        <ul class="nav" id="my-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-monthly-tab" data-toggle="pill" href="#pills-monthly2" role="tab" aria-controls="pills-monthly" aria-selected="false">Weekly</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <h2 style="color: aliceblue;">Weekly Investment</h2>
+                        <div class="tab-pane fade active show" id="pills-monthly2" role="tabpanel" aria-labelledby="pills-monthly-tab">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 10 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">200%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $100</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $1000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 20 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">400%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $200</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $2000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="price-box">
+                                        <div class="price-title">
+                                            <h3 class="heading-title">After 30 days</h3>
+                                        </div>
+                                        <div class="price-rate">
+                                            <div class="center-align-content">
+                                                <p class="price">500%</p>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="service-feature">
+                                            <ul class="service-feature-list">
+                                                <li>
+                                                    <p>Minimam Invest : $300</p>
+                                                </li>
+                                                <li>
+                                                    <p>Maximam Invest : $3000</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <a class="base-btn1" href="#">Deposit<i class="fas fa-dollar-sign"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+<!--investment plan end-->
+     
+
+    <!-- about area section start-->
+<section  class="about"> 
+    <div class="row justify-content-center text-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="about-section">
+          <h2 class="title" style="color: aliceblue;">About Us</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="row mt-5">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="about-img">
+            <img src="img/india.jpg" class="img-fluid wow fadeInRightBig"
+              data-wow-duration="3s" data-wow-delay="0.5s" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3>About company</h3>
+          <p class="font-italic">
+          One prominent sustainable investment company is "Calvert Research and Management," which specializes in ESG investing. Calvert integrates ESG factors into its investment process, actively seeking companies with strong ESG performance. They manage a range of funds, focusing on various sustainability themes such as climate change, gender diversity, and clean energy. Calvert engages with companies in its portfolio to encourage ESG improvements and transparency. Their mission is to provide investors with opportunities to align their financial goals with values and sustainability objectives, aiming for competitive returns while promoting responsible corporate practices.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-10 col-lg-8">
+          <div class="about-section">
+            <h2 class="title" style="color: aliceblue;">Our Mission</h2>  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="font-italic" style="color: azure;">Sustainable investment's mission is to integrate environmental, social, and governance (ESG) criteria into the investment decision-making process, with the goal of achieving financial returns while also fostering positive societal and environmental outcomes. This approach recognizes the importance of responsible corporate behavior, risk mitigation, and long-term value creation, ultimately aligning investment strategies with broader sustainability objectives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+     <!-- about area section start--> 
+
+
+     <!-- contact us sectio start -->
+<section class="contact section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-5">
+        <div class="contact-info">
+          <h3>For Any Queries and Support</h3>
+          <div class="contact-info-item">
+            <i class="fas fa-location-arrow"></i>
+            <h4>Company Location</h4>
+            <p>surat</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <h4>mail us at</h4>
+            <p>dk18@gmail.com</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <h style="color: aliceblue;">Call us on</h4>
+            <p>+91 818118181</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-7">
+        <div class="contact-form">
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" placeholder="First Name" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Last Name" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Your Email" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Your phone" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input type="text" placeholder="Subject" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <textarea placeholder="Message" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-2">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- contact us sectio end -->
+
+
+
+
+
+
+
+
+   <!--footer section start-->
+  <div class="footer-section pt-3 pb-3">
+    <div class="follow-us-section pt-3 pb-2" id="followUsSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="follow-us-section-heading">social links</h1>
+          </div>
+          <div class="col-12">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="follow-us-icon-container">
+                  <i class="fab fa-twitter icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-instagram icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-facebook icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-youtube icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-linkedin icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-whatsapp icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-cta py-5">
+          <div class="row">        
+            <div class="col-sm-6 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                  <div class="cta-text">
+                    <h4>Call us</h4>
+                      <span>+91 8282828282</span>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                    <span>dk1@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="#"><img src="img/logo.png" class="img-fluid"></a>
+                </div>
+                <div class="footer-text">
+                  <p>An investment website's primary goal is to provide accurate information and tools to help people make informed investment decisions.</p>
+                </div>                  
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">portfolio</a></li>
+                  <li><a href="#">contact</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">Expert team</a></li>                   
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Subscribe</h3>
+                </div>
+                <div class="footer-text">
+                  <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane"></i></button> 
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+<!--footer section end-->
+
+
+<div id="sectionLoginPageS">
+  <section id="login">
+      <div class="form-box">
+          <div class="form-value">
+              <form action="">
+                  <h2>Login</h2>
+                  <div class="inputbox">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <input type="email" required>
+                      <label for="">Email</label>
+                  </div>
+                  <div class="inputbox">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input type="password" required>
+                      <label for="">Password</label>
+                  </div>
+                  <div class="forget">
+                      <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+                    
+                  </div>
+                  <button class="button_l">Log in</button>
+                  
+                  <p class="link">Don't have an account<br>
+                      <a href="#" onclick="display('signin')">Sign up </a> here</a></p>
+                      <p class="liw">Log in with</p>
+  
+                      <div class="icons_l">
+                          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                      </div>
+              </form>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="signin" >
+      <div class="form-box1">
+          <div class="form-value">
+              <form action="">
+                  <h2>create account</h2>
+                  
+                  <div class="inputbox">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <input type="email" required>
+                      <label for="">Email</label>
+                  </div>
+                  <div class="inputbox">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input type="password" required>
+                      <label for="">Password</label>
+                  </div>
+                 
+                  <button class="button_l">sign in</button>
+                  
+                  
+                      <p class="liw">sign up with</p>
+  
+                      <div class="icons_l">
+                          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                          <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                      </div>
+              </form>
+          </div>
+      </div>
+  </section>
+
+</div>
+
+
+
+
+
+<script src="devheat.js"></script>
+<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
